@@ -1,0 +1,10 @@
+#!/bin/bash
+# Update the system packages
+sudo dnf update -y
+
+# Install Apache HTTP server, PHP, and MySQL support
+sudo dnf install -y httpd php php-mysqli mariadb105
+
+# Start and enable Apache service
+sudo systemctl start httpd
+sudo systemctl enable httpd
